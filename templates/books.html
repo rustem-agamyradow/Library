@@ -1,0 +1,72 @@
+﻿{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+
+<div class="content container-fluid">
+	<div class="page-header">
+		<div class="row">
+			<div class="col-lg-6 col-md-6 col-sm-6 col-12">
+				<h5 class="text-uppercase mb-0 mt-0 page-title">Books</h5>
+			</div>
+			<div class="col-lg-6 col-md-6 col-sm-6 col-12">
+				<ul class="breadcrumb float-right p-0 mb-0">
+					<li class="breadcrumb-item"><a href="(% url 'index' %)"><i class="fas fa-home"></i> Home</a>
+					</li>
+					<li class="breadcrumb-item"><a href="{% url 'categors' %}">Categors list</a></li>
+					<li class="breadcrumb-item"><span> Books</span></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-lg-12 col-sm-12 col-12 text-right add-btn-col">
+			<a class="btn btn-primary btn-rounded float-right" href="{% url 'add_book'  %}"><i class="fas fa-plus"></i>
+				Add Book</a>
+		</div>
+	</div>
+	<div class="row"> 
+		{% for book in books %}
+		<div class="col-md-4 col-sm-6 col-6 col-xl-4">
+			<div class="blog grid-blog">
+				<div class="blog-image">
+					<a href=""><img class="img-fluid" src="{{ book.image.url }}"
+							style="height: 350px; width: 400px;"></a>
+				</div>
+
+				<div class="blog-content">
+					<p class="faf" style=" text-align: center; "> Book name :{{book.name}}</p>
+					<p class="faf" style=" text-align: center; ">Awtor : {{book.autor}}</p>
+					<p>
+						{% if book.file %}
+						<a href="{{ book.file.url }}" target="_blank" class="btn btn-primary"> <i
+								class="fas fa-file-pdf"></i> View
+						</a>
+						{% else %}
+						<span>No PDF available</span>
+						{% endif %}
+					</p>
+					<form action="{% url 'delete_book' book.id %}" method="POST">
+						{% csrf_token %}
+						<button type="submit" class="btn btn-danger">Delete</button>
+					</form>
+					<div class="blog-info clearfix">
+						<div class="post-left">
+							<ul>
+								
+								<li><a href="#"><i class="far fa-calendar-alt" aria-hidden="true"></i>
+										<span>{{book.date}}</span></a></li>
+							</ul>
+						</div>
+
+					</div>
+				</div>
+			</div>
+		</div>
+
+		{% endfor %}
+
+
+	</div>
+</div>
+{% endblock %}

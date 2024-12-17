@@ -1,0 +1,194 @@
+﻿{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+
+
+<div class="content container-fluid">
+	<div class="page-header">
+		<div class="row">
+			<div class="col-lg-6 col-md-6 col-sm-6 col-12">
+				<h5 class="text-uppercase mb-0 mt-0 page-title">Blog View</h5>
+			</div>
+			<div class="col-lg-6 col-md-6 col-sm-6 col-12">
+				<ul class="breadcrumb float-right p-0 mb-0">
+					<li class="breadcrumb-item"><a href="index.html"><i class="fas fa-home"></i> Home</a>
+					</li>
+					<li class="breadcrumb-item"><a href="#">Blog</a></li>
+					<li class="breadcrumb-item"><span> Blog View</span></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-8">
+			<div class="blog-view">
+				<article class="blog blog-single-post">
+					<h3 class="blog-title">Do you know the ABCs school?</h3>
+					<div class="blog-info clearfix">
+						<div class="post-left">
+							<ul>
+								<li><a href="#"><i class="far fa-calendar-alt" aria-hidden="true"></i>
+										<span>December 6, 2018</span></a></li>
+								<li><a href="#"><i class="fas fa-user-o" aria-hidden="true"></i> <span>By
+											Andrew Dawis</span></a></li>
+							</ul>
+						</div>
+						<div class="post-right"><a href="#"><i class="fas fa-comment-o" aria-hidden="true"></i>1
+								Comment</a></div>
+					</div>
+					<div class="blog-image">
+						<a href="#"><img alt="" src="assets/img/blog/blog-01.jpg" class="img-fluid"></a>
+					</div>
+					<div class="blog-content">
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor   laborum.</p>
+						<p>Sed ut perspiciatis unde omnis ifte natus error sit voluptatem accusantium
+							 pariatur?</p>
+						<blockquote>
+							<p>Veftibulum id ligula porta felis euismod semper. Sed posuere consectetur eft at lobortis. </p>
+						</blockquote>
+						<p>At vero eos et accusamus et iufto odio dignissimos ducimus qui blanditiis .</p>
+					</div>
+				</article>
+				 
+				<div class="widget author-widget clearfix">
+					<h3>About author</h3>
+					<div class="about-author">
+						<div class="about-author-img">
+							<div class="author-img-wrap">
+								<img class="img-fluid rounded-circle" alt="" src="assets/img/user.jpg">
+							</div>
+						</div>
+						<div class="author-details">
+							<span class="blog-author-name">Linda Barrett</span>
+							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+								tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+								quis noftrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+								consequat.</p>
+						</div>
+					</div>
+				</div>
+				 
+				<div class="widget new-comment clearfix">
+					<h3>Leave Comment</h3>
+					<form>
+						<div class="row">
+							<div class="col-sm-8">
+								<div class="form-group">
+									<label>Name <span class="text-red">*</span></label>
+									<input type="text" class="form-control">
+								</div>
+								<div class="form-group">
+									<label>Your email address <span class="text-red">*</span></label>
+									<input type="email" class="form-control">
+								</div>
+								<div class="form-group">
+									<label>Comments</label>
+									<input type="text" class="form-control">
+								</div>
+								<div class="comment-submit">
+									<input type="submit" value="Submit" class="btn">
+								</div>
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+		<aside class="col-md-4">
+			 
+			<div class="widget post-widget">
+				<h5>LaTest posts</h5>
+				<ul class="laTest-posts">
+					<li>
+						<div class="post-thumb">
+							<a href="blog-details.html">
+								<img class="img-fluid" src="assets/img/blog/blog-thumb-01.jpg" alt="">
+							</a>
+						</div>
+						<div class="post-info">
+							<h4>
+								<a href="blog-details.html">Lorem ipsum dolor sit amet consectetur</a>
+							</h4>
+							<p><i aria-hidden="true" class="fas fa-calendar-alt"></i> December 6, 2018</p>
+						</div>
+					</li>
+					<li>
+						<div class="post-thumb">
+							<a href="blog-details.html">
+								<img class="img-fluid" src="assets/img/blog/blog-thumb-02.jpg" alt="">
+							</a>
+						</div>
+						<div class="post-info">
+							<h4>
+								<a href="blog-details.html">Lorem ipsum dolor sit amet consectetur</a>
+							</h4>
+							<p><i aria-hidden="true" class="fas fa-calendar-alt"></i> December 6, 2018</p>
+						</div>
+					</li>
+					<li>
+						<div class="post-thumb">
+							<a href="blog-details.html">
+								<img class="img-fluid" src="assets/img/blog/blog-thumb-03.jpg" alt="">
+							</a>
+						</div>
+						<div class="post-info">
+							<h4>
+								<a href="blog-details.html">Lorem ipsum dolor sit amet consectetur</a>
+							</h4>
+							<p><i aria-hidden="true" class="fas fa-calendar-alt"></i> December 6, 2018</p>
+						</div>
+					</li>
+					<li>
+						<div class="post-thumb">
+							<a href="blog-details.html">
+								<img class="img-fluid" src="assets/img/blog/blog-thumb-04.jpg" alt="">
+							</a>
+						</div>
+						<div class="post-info">
+							<h4>
+								<a href="blog-details.html">Lorem ipsum dolor sit amet consectetur</a>
+							</h4>
+							<p><i aria-hidden="true" class="fas fa-calendar-alt"></i> December 6, 2018</p>
+						</div>
+					</li>
+				</ul>
+			</div>
+			<div class="widget category-widget">
+				<h5>Blog Categories</h5>
+				<ul class="categories">
+					<li><a href="#"><i class="fas fa-long-arrow-alt-right" aria-hidden="true"></i> Lorem
+							ipsum dolor</a></li>
+					<li><a href="#"><i class="fas fa-long-arrow-alt-right" aria-hidden="true"></i> Lorem
+							ipsum dolor</a></li>
+					<li><a href="#"><i class="fas fa-long-arrow-alt-right" aria-hidden="true"></i> Lorem
+							ipsum dolor</a></li>
+					<li><a href="#"><i class="fas fa-long-arrow-alt-right" aria-hidden="true"></i> Lorem
+							ipsum dolor</a></li>
+					<li><a href="#"><i class="fas fa-long-arrow-alt-right" aria-hidden="true"></i> Lorem
+							ipsum dolor</a></li>
+					<li><a href="#"><i class="fas fa-long-arrow-alt-right" aria-hidden="true"></i> Lorem
+							ipsum dolor</a></li>
+				</ul>
+			</div>
+			<div class="widget tags-widget">
+				<h5>Tags</h5>
+				<ul class="tags">
+					<li><a href="#" class="tag">Maths</a></li>
+					<li><a href="#" class="tag">Science</a></li>
+					<li><a href="#" class="tag">Library</a></li>
+					<li><a href="#" class="tag">Family</a></li>
+					<li><a href="#" class="tag">Sports</a></li>
+					<li><a href="#" class="tag">Test</a></li>
+					<li><a href="#" class="tag">student</a></li>
+					<li><a href="#" class="tag">Employee</a></li>
+					<li><a href="#" class="tag">Assignment</a></li>
+					<li><a href="#" class="tag">Exam</a></li>
+					<li><a href="#" class="tag">Blog</a></li>
+				</ul>
+			</div>
+		</aside>
+	</div>
+</div>
+
+{% endblock %}

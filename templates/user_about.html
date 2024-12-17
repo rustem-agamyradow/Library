@@ -1,0 +1,90 @@
+﻿{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+
+
+
+<div class="content container-fluid">
+	<div class="page-header">
+		<div class="row">
+			<div class="col-lg-6 col-md-12 col-sm-12 col-12">
+				<h5 class="text-uppercase mb-0 mt-0 page-title">About Student</h5>
+			</div>
+			<div class="col-lg-6 col-md-12 col-sm-12 col-12">
+				<ul class="breadcrumb float-right p-0 mb-0">
+					<li class="breadcrumb-item"><a href="index.html"><i class="fas fa-home"></i> Home</a>
+					</li>
+					<li class="breadcrumb-item"><a href="all-students.html">Student</a></li>
+					<li class="breadcrumb-item"><span> About Student</span></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div class="content-page">
+		<div class="row">
+			<div class="col-lg-12 col-md-12 col-sm-12 col-12">
+				<div class="aboutprofile-sidebar">
+					<div class="row">
+						<div class="col-lg-3 col-md-12 col-sm-12 col-12">
+							<div class="aboutprofile">
+								<div class="card">
+									<div class="card-body">
+										<div class="row">
+											<div class="col-lg-12 col-md-12 col-sm-12 col-12">
+												<div class="aboutprofile-pic">
+													<img class="card-img-top" src="{{ user.image.url }}" alt="Card image">
+												</div>
+												<div class="aboutprofile-name">
+													<h5 class="text-center mt-2">Name:{{user.first_name}}</h5>
+													<p class="text-center">Surname:{{user.last_name}}</p>
+												</div>
+												<ul class="list-group list-group-flush">
+													<li class="list-group-item"><b>Phone</b><a href="#"
+															class="float-right">{{user.phone}}</a></li>
+													<li class="list-group-item"><b>E-mail</b><a href="#"
+															class="float-right">{{user.email}}</a></li>
+													<li class="list-group-item"><b>Location</b><a href="#"
+															class="float-right">{{user.address}}</a></li>
+												</ul>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							 
+							 
+						</div>
+						<div class="col-lg-9 col-md-12 col-sm-12 col-12">
+							<div class="profile-content">
+								<div class="row">
+									<div class="col-lg-12">
+										<div class="card">
+
+											<div class="card-header">
+												<h4 class="page-title">
+													About Me
+												</h4>
+											</div>
+
+											<div class="card-body">
+												<div id="biography" class="biography">
+													 
+												 
+													<p> {{user.desciption}}</p>
+											 
+													 
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+{% endblock %}

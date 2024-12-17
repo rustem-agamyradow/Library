@@ -1,0 +1,85 @@
+﻿{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+
+<div class="content container-fluid">
+	<div class="page-header">
+		<div class="row">
+			<div class="col-lg-6 col-md-6 col-sm-6 col-12">
+				<h5 class="text-uppercase mb-0 mt-0 page-title">User list</h5>
+			</div>
+			<div class="col-lg-6 col-md-6 col-sm-6 col-12">
+				<ul class="breadcrumb float-right p-0 mb-0">
+					<li class="breadcrumb-item"><a href="index.html"><i class="fas fa-home"></i> Home</a>
+					</li>
+					<li class="breadcrumb-item"><span> User list</span></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-sm-4 col-12">
+		</div>
+		<div class="col-sm-8 col-12 text-right add-btn-col">
+			<a href="{% url 'add_user' %}" class="btn btn-primary float-right btn-rounded"><i class="fas fa-plus"></i>
+				Add User</a>
+		</div>
+	</div>
+	<div class="content-page">
+
+		<div class="row">
+			<div class="col-md-12 mb-3">
+				<div class="table-responsive">
+					<table class="table custom-table datatable">
+						<thead class="thead-light">
+							<tr>
+								<th> Name </th>
+
+
+								<th>Birthday</th>
+								<th>E-mail</th>
+
+								<th>Phone nomer</th>
+
+								<th class="text-right">settings</th>
+							</tr>
+						</thead>
+						<tbody>
+							{% for user in users %}
+							<tr>
+								<td>
+									<h2>
+										
+										<a href="{% url 'user_about' user.id %}" class="avatar text-white"> <img src="{{user.image.url}}" alt="">  </a><a
+											href="{% url 'user_about' user.id %}">{{user.name}}</a>
+									</h2>
+								</td>
+								<td>{{user.birthday}}</td>
+								<td>{{user.email}}</td>
+
+							 
+								<td>{{user.phone}}</td>
+
+								<td class="text-right">
+									<form action="{% url 'delete_user' user.id %}" method="post">
+										{% csrf_token %}
+										<button type="submit" data-toggle="modal" data-target="#delete_employee"
+										class="btn btn-danger btn-sm mb-1">
+										<i class="far fa-trash-alt"></i>
+									</button>
+                                        
+									</form>
+									
+								</td>
+							</tr>
+							{% endfor %}
+
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+{% endblock %}

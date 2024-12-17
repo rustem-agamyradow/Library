@@ -1,0 +1,52 @@
+﻿{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+
+
+<div class="content container-fluid">
+	<div class="page-header">
+		<div class="row">
+			<div class="col-lg-6 col-md-6 col-sm-6 col-12">
+				<h5 class="text-uppercase mb-0 mt-0 page-title">News View</h5>
+			</div>
+			<div class="col-lg-6 col-md-6 col-sm-6 col-12">
+				<ul class="breadcrumb float-right p-0 mb-0">
+					<li class="breadcrumb-item"><a href="index.html"><i class="fas fa-home"></i> Home</a>
+					</li>
+					<li class="breadcrumb-item"><a href="#">News</a></li>
+					<li class="breadcrumb-item"><span> News View</span></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-12" >
+			<div class="blog-view">
+				<article class="blog blog-single-post">
+					<h3 class="blog-title">{{new.title}}</h3>
+					<div class="blog-info clearfix">
+						<div class="post-left">
+							<ul>
+								<li><a href="#"><i class="far fa-calendar-alt" aria-hidden="true"></i>
+										<span>{{new.date}}</span></a></li>
+							 
+							</ul>
+						</div>
+					 
+					</div>
+					<div class="blog-image">
+						<a href="#"><img alt="" src="{{new.image.url}}"   class="img-fluid"></a>
+					</div>
+					<div class="blog-content">
+						<p> {{new.content}}</p>
+					 
+					</div>
+				</article>
+				 
+			</div>
+		</div>
+		 
+	</div>
+</div>
+{% endblock %}
