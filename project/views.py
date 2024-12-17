@@ -46,7 +46,7 @@ def register(request):
         if form.is_valid():
             user = form.save()
             login(request, user)  # Kayıt olduktan sonra giriş yap
-            return redirect('/')
+            return redirect('index')
     else:
         form = RegisterForm()
     return render(request, 'register.html', {'form': form})
@@ -73,7 +73,7 @@ def delete_book(request, book_id):
     return redirect('books', category_id=book.category.id) 
 
 def delete_user (request, user_id):
-    user = get_object_or_404(User_bot, id=user_id)
+    user = get_object_or_404(User, id=user_id)
     user.delete()
     return redirect('users')  # Silme işleminden sonra user liste sayfasına yönlendirir
 

@@ -75,6 +75,35 @@ class CategoryForm(forms.ModelForm):
 
 
 class BookForm(forms.ModelForm):
+    name = forms.CharField(widget=forms.TextInput(attrs={
+        'class': 'form-control',
+        'placeholder': 'Name'
+    }))
+    autor = forms.CharField(widget=forms.TextInput(attrs={
+        'class': 'form-control',
+        'placeholder': 'Autor'
+    }))
+    category = forms.ModelChoiceField(queryset=Category.objects.all(), widget=forms.Select(attrs={
+        'class': 'form-control',
+        'placeholder': 'Category'
+    }))
+    desciption = forms.CharField(widget=forms.Textarea(attrs={
+        'class': 'form-control',
+        'placeholder': 'Description'
+    }))
+    file = forms.FileField(widget=forms.FileInput(attrs={
+        'class': 'form-control',
+        'placeholder': 'File'
+    }))
+    available = forms.BooleanField(widget=forms.CheckboxInput(attrs={
+        'class': 'form-control',
+        'placeholder': 'Available'
+    }))
+    image = forms.ImageField(widget=forms.FileInput(attrs={
+        'class': 'form-control',
+        'placeholder': 'Image'
+    }))
+    
     class Meta:
         model = Book
         fields = ['name','autor','category','desciption','file','available','image']
@@ -91,6 +120,18 @@ class UserForm(forms.ModelForm):
 
 
 class NewForm(forms.ModelForm):
+    title = forms.CharField(widget=forms.TextInput(attrs={
+        'class': 'form-control',
+        'placeholder': 'Title'
+    }))
+    image = forms.ImageField(widget=forms.FileInput(attrs={
+        'class': 'form-control',
+        'placeholder': 'Image'
+    }))
+    content = forms.CharField(widget=forms.Textarea(attrs={
+        'class': 'form-control',
+        'placeholder': 'Content'
+    }))
     class Meta:
         model = New
         fields = ['title','image','content']

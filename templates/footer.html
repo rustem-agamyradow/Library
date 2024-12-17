@@ -41,7 +41,7 @@
                     <span class="user-img"><img class="rounded-circle" src="{% static 'assets/img/user-06.jpg' %}" width="30"
                             alt="Admin">
                         <span class="status online"></span></span>
-                    <span>Admin</span>
+                    <span>{{ user.username }}</span>
                 </a>
                 <div class="dropdown-menu">
                     <a class="dropdown-item" href="{% url 'profile' %}">My Profile</a>

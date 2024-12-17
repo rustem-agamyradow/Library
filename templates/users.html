@@ -11,21 +11,21 @@
 			</div>
 			<div class="col-lg-6 col-md-6 col-sm-6 col-12">
 				<ul class="breadcrumb float-right p-0 mb-0">
-					<li class="breadcrumb-item"><a href="index.html"><i class="fas fa-home"></i> Home</a>
+					<li class="breadcrumb-item"><a href="{% url 'index' %}"><i class="fas fa-home"></i> Home</a>
 					</li>
 					<li class="breadcrumb-item"><span> User list</span></li>
 				</ul>
 			</div>
 		</div>
 	</div>
-	<div class="row">
+	<!-- <div class="row">
 		<div class="col-sm-4 col-12">
 		</div>
 		<div class="col-sm-8 col-12 text-right add-btn-col">
 			<a href="{% url 'add_user' %}" class="btn btn-primary float-right btn-rounded"><i class="fas fa-plus"></i>
 				Add User</a>
 		</div>
-	</div>
+	</div> -->
 	<div class="content-page">
 
 		<div class="row">
@@ -34,13 +34,15 @@
 					<table class="table custom-table datatable">
 						<thead class="thead-light">
 							<tr>
-								<th> Name </th>
+								 
 
 
-								<th>Birthday</th>
+							 
+								<th>Name</th>
+								<th>Last name</th>
 								<th>E-mail</th>
 
-								<th>Phone nomer</th>
+							 
 
 								<th class="text-right">settings</th>
 							</tr>
@@ -51,15 +53,17 @@
 								<td>
 									<h2>
 										
-										<a href="{% url 'user_about' user.id %}" class="avatar text-white"> <img src="{{user.image.url}}" alt="">  </a><a
-											href="{% url 'user_about' user.id %}">{{user.name}}</a>
+										<!-- <a href="{% url 'user_about' user.id %}" class="avatar text-white"> <img src="{{user.image.url}}" alt="">  </a> -->
+										<a
+											href="{% url 'user_about' user.id %}">{{user.first_name}}</a>
 									</h2>
 								</td>
-								<td>{{user.birthday}}</td>
+								 
+								<td>{{user.last_name}}</td>
 								<td>{{user.email}}</td>
 
 							 
-								<td>{{user.phone}}</td>
+						 
 
 								<td class="text-right">
 									<form action="{% url 'delete_user' user.id %}" method="post">

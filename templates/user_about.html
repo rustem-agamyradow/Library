@@ -9,14 +9,14 @@
 	<div class="page-header">
 		<div class="row">
 			<div class="col-lg-6 col-md-12 col-sm-12 col-12">
-				<h5 class="text-uppercase mb-0 mt-0 page-title">About Student</h5>
+				<h5 class="text-uppercase mb-0 mt-0 page-title">About user</h5>
 			</div>
 			<div class="col-lg-6 col-md-12 col-sm-12 col-12">
 				<ul class="breadcrumb float-right p-0 mb-0">
-					<li class="breadcrumb-item"><a href="index.html"><i class="fas fa-home"></i> Home</a>
+					<li class="breadcrumb-item"><a href="{% url 'index' %}"><i class="fas fa-home"></i> Home</a>
 					</li>
-					<li class="breadcrumb-item"><a href="all-students.html">Student</a></li>
-					<li class="breadcrumb-item"><span> About Student</span></li>
+					<li class="breadcrumb-item"><a href="{% url 'users' %}">User list</a></li>
+					<li class="breadcrumb-item"><span> About user</span></li>
 				</ul>
 			</div>
 		</div>
@@ -26,54 +26,40 @@
 			<div class="col-lg-12 col-md-12 col-sm-12 col-12">
 				<div class="aboutprofile-sidebar">
 					<div class="row">
-						<div class="col-lg-3 col-md-12 col-sm-12 col-12">
-							<div class="aboutprofile">
-								<div class="card">
-									<div class="card-body">
-										<div class="row">
-											<div class="col-lg-12 col-md-12 col-sm-12 col-12">
-												<div class="aboutprofile-pic">
-													<img class="card-img-top" src="{{ user.image.url }}" alt="Card image">
-												</div>
-												<div class="aboutprofile-name">
-													<h5 class="text-center mt-2">Name:{{user.first_name}}</h5>
-													<p class="text-center">Surname:{{user.last_name}}</p>
-												</div>
-												<ul class="list-group list-group-flush">
-													<li class="list-group-item"><b>Phone</b><a href="#"
-															class="float-right">{{user.phone}}</a></li>
-													<li class="list-group-item"><b>E-mail</b><a href="#"
-															class="float-right">{{user.email}}</a></li>
-													<li class="list-group-item"><b>Location</b><a href="#"
-															class="float-right">{{user.address}}</a></li>
-												</ul>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-							 
-							 
-						</div>
-						<div class="col-lg-9 col-md-12 col-sm-12 col-12">
+	
+						<div class="col-lg-12 col-md-12 col-sm-12 col-12">
 							<div class="profile-content">
 								<div class="row">
 									<div class="col-lg-12">
 										<div class="card">
-
+	
 											<div class="card-header">
 												<h4 class="page-title">
-													About Me
+													About user
 												</h4>
 											</div>
-
+	
 											<div class="card-body">
 												<div id="biography" class="biography">
+													<div class="row">
+														<div class="col-md-3 col-6"> <strong>
+																Name</strong>
+															<p class="text-muted">{{user.first_name}}</p>
+														</div>
+														<div class="col-md-3 col-6"> <strong>
+																Last name</strong>
+															<p class="text-muted">{{user.last_name}}</p>
+														</div>
+														 
+														<div class="col-md-3 col-6"> <strong>Email</strong>
+															<p class="text-muted"> {{user.email}}
+															</p>
+														</div>
+														 
+													</div>
+													<hr>
 													 
-												 
-													<p> {{user.desciption}}</p>
-											 
-													 
+	
 												</div>
 											</div>
 										</div>
@@ -88,3 +74,62 @@
 	</div>
 </div>
 {% endblock %}
+
+<div class="content-page">
+	<div class="row">
+		<div class="col-lg-12 col-md-12 col-sm-12 col-12">
+			<div class="aboutprofile-sidebar">
+				<div class="row">
+
+					<div class="col-lg-12 col-md-12 col-sm-12 col-12">
+						<div class="profile-content">
+							<div class="row">
+								<div class="col-lg-12">
+									<div class="card">
+
+										<div class="card-header">
+											<h4 class="page-title">
+												About Me
+											</h4>
+										</div>
+
+										<div class="card-body">
+											<div id="biography" class="biography">
+												<div class="row">
+													<div class="col-md-3 col-6"> <strong>Full
+															Name</strong>
+														<p class="text-muted">Parker</p>
+													</div>
+													<div class="col-md-3 col-6"> <strong>Mobile</strong>
+														<p class="text-muted">973-584-5870</p>
+													</div>
+													<div class="col-md-3 col-6"> <strong>Email</strong>
+														<p class="text-muted"><a href="/cdn-cgi/l/email-protection"
+																class="__cf_email__"
+																data-cfemail="104071627b7562507568717d607c753e737f7d">[email&#160;protected]</a>
+														</p>
+													</div>
+													<div class="col-md-3 col-6">
+														<strong>Location</strong>
+														<p class="text-muted">USA</p>
+													</div>
+												</div>
+												<hr>
+												<p>Magtymguly adyndaky Türkmen döwlet uniwersiteti 1931-nji ýylda
+													Aşgabat mugallymçylyk instituty hökmünde esaslandyryldy.
+													1950-nji ýylda ýokary okuw mekdebi Türkmen döwlet uniwersitetine
+													öwrüldi. Bu ýokary okuw mekdebi häzir Gündogaryň beýik akyldary
+												 </p>
+
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
